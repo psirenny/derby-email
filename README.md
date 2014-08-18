@@ -46,7 +46,8 @@ Send your email:
     app.loadStyles(...);
 
     function send(err, results) {
-      // send mail...
+      console.log(results);
+      // prints {html: '...', subject: '...', text: '...'}
     };
 
     // return email options
