@@ -1,0 +1,64 @@
+Derby Email
+===========
+
+Create emails using [Derby JS](http://derbyjs.com) apps/templates.  
+It uses [derby-render](https://github.com/psirenny/derby-render) to render views and [juice](https://github.com/Automattic/juice) to inline styles.
+The results returned match the values used by [nodemailer](https://github.com/andris9/Nodemailer).
+
+Installation
+------------
+
+    $ npm install derby-email --save
+
+Usage
+-----
+
+Create your views:
+
+**index.html**
+
+    <Body:>
+      <p>Some text.</p>
+
+    <Text:>
+      Some text.
+
+A view named after a capitalized field will be returned.
+
+**other.html**
+
+    <Subject:>
+      Hello {{username}}
+
+    <Body:>
+      <p>foo bar</p>
+
+    <Text:>
+      foo bar
+
+Send your email:
+
+    var derby = require('derby');
+    var app = derby.createApp('app', __filename);
+    var email = require('derby-email')(app);
+    app.loadViews(...);
+    app.loadStyles(...);
+
+    function send(err, results) {
+      // send mail...
+    };
+
+    // return email options
+    email(send);
+
+    // or for a specific page
+    html = email('other', {username: 'user'}, send);
+
+Options
+-------
+
+**fields** – The fields (views) to render and return. Includes: html, text, subject, from, to, etc...
+
+**render** – Configuration options passed to derby-render. See [derby-render](https://github.com/psirenny/derby-render).
+
+**styles** – Configuration options passed to juice. See [juice](https://github.com/Automattic/juice).
