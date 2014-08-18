@@ -8,7 +8,7 @@
     "juice": "^0.4.0",
     "merge": "^1.1.3"
   },
-  "description": "Render email templates in Derby JS.",
+  "description": "Create emails using Derby JS apps/templates.",
   "devDependencies": {
     "chai": "^1.9.1",
     "derby": "^0.6.0-alpha23",
