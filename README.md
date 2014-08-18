@@ -1,8 +1,9 @@
 Derby Email
 ===========
 
-Create emails using [Derby JS](http://derbyjs.com) apps/templates.  
-It uses [derby-render](https://github.com/psirenny/derby-render) to render views and [juice](https://github.com/Automattic/juice) to inline styles.
+Create emails using [Derby JS](http://derbyjs.com) apps/templates.
+It uses [derby-render](https://github.com/psirenny/derby-render) to render views and [juice](https://github.com/Automattic/juice) to inline styles.  
+
 The results returned match the values used by [nodemailer](https://github.com/andris9/Nodemailer).
 
 Installation
@@ -23,7 +24,7 @@ Create your views:
     <Text:>
       Some text.
 
-A view named after a capitalized field will be returned.
+Any view named after a field and capitalized will be returned as a result.
 
 **other.html**
 
