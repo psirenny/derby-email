@@ -4,7 +4,7 @@ Derby Email
 Create emails using [Derby JS](http://derbyjs.com) apps/templates.
 It uses [derby-render](https://github.com/psirenny/derby-render) to render views and [juice](https://github.com/Automattic/juice) to inline styles.  
 
-The results returned match the values used by [nodemailer](https://github.com/andris9/Nodemailer).
+For convenience, the default results returned match the values read by [nodemailer](https://github.com/andris9/Nodemailer).
 
 Installation
 ------------
