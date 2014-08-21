@@ -20,6 +20,9 @@ Create your views:
 
 **index.html**
 
+    <From:>
+      {{unescaped $formatEmail('app', from)}}
+
     <Body:>
       <p>Some text.</p>
 
@@ -57,6 +60,13 @@ Send your email:
 
     // or for a specific page
     html = email('other', {username: 'user'}, send);
+
+View Functions
+--------------
+
+The following view functions are available in your views:
+
+**$formatEmail(name, address)** – Returns a formatted email address. i.e. `name <foo@bar.com>`. You must unescape the function for the `<` and `>` to render correctly.
 
 Options
 -------
