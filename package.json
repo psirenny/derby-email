@@ -6,7 +6,7 @@
   "dependencies": {
     "derby-render": "^1.0.1",
     "juice": "^0.4.0",
-    "merge": "^1.1.3"
+    "node.extend": "^1.1.0"
   },
   "description": "Create emails using Derby JS apps/templates.",
   "devDependencies": {
