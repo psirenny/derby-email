@@ -42,6 +42,7 @@ describe('derby-email', function () {
       var data = {username: 'user'};
       var render = lib(fixture.app);
       render(data, function (err, results) {
+        results.from.should.eql(fixture.expected.from);
         results.html.should.eql(fixture.expected.html);
         results.subject.should.eql(fixture.expected.subject);
         results.text.should.eql(fixture.expected.text);
