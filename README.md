@@ -20,6 +20,8 @@ Create your views:
 
 **index.html**
 
+    <import: src="./other">
+
     <From:>
       {{unescaped $formatEmail('app', from)}}
 
