@@ -66,7 +66,7 @@ View Functions
 
 The following view functions are available in your views:
 
-**$formatEmail(name, address)** – Returns a formatted email address. i.e. `name <foo@bar.com>`. You must unescape the function for the `<` and `>` to render correctly.
+**$formatEmail(name, address)** – Returns a formatted email address. i.e. `name <foo@bar.com>`.
 
 Options
 -------
