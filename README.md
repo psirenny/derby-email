@@ -23,7 +23,7 @@ Create your views:
     <import: src="./other">
 
     <From:>
-      {{unescaped $formatEmail('app', from)}}
+      {{unescaped $formatEmail('app', 'foo@bar.com')}}
 
     <Body:>
       <p>Some text.</p>
@@ -36,7 +36,7 @@ Any view named after a field and capitalized will be returned as a result.
 **other.html**
 
     <Subject:>
-      Hello {{username}}
+      Hello {{user}}
 
     <Body:>
       <p>foo bar</p>
@@ -54,14 +54,14 @@ Send your email:
 
     function send(err, results) {
       console.log(results);
-      // prints {html: '...', subject: '...', text: '...'}
+      // {from: 'app <foo@bar.com>', html: '...', text: '...'}
     };
 
     // return email options
     email(send);
 
     // or for a specific page
-    html = email('other', {username: 'user'}, send);
+    email('other', {user: 'user'}, send);
 
 View Functions
 --------------
