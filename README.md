@@ -49,19 +49,29 @@ Send your email:
     var derby = require('derby');
     var app = derby.createApp('app', __filename);
     var email = require('derby-email')(app);
+    var nodemailer = require('nodemailer');
     app.loadViews(...);
     app.loadStyles(...);
 
-    function send(err, results) {
-      console.log(results);
-      // {from: 'app <foo@bar.com>', html: '...', text: '...'}
+    function send(err, emailOptions) {
+      var transporter = nodemailer.createTransports(...);
+      transporter.send(emailOptions, function (err, info) {
+        ...
+      })
     };
 
     // return email options
     email(send);
 
-    // or for a specific page
-    email('other', {user: 'user'}, send);
+    // with data
+    var data = {_page: {userId: '...'}};
+    email(data, send);
+
+    // with a specific page (namespace)
+    email('welcome', send);
+
+    // or with both
+    email('welcome', data, send);
 
 View Functions
 --------------
@@ -73,8 +83,8 @@ The following view functions are available in your views:
 Options
 -------
 
-**fields** – The fields (views) to render and return. Includes: html, text, subject, from, to, etc...
+All options are also passed in to derby-render. See [derby-render](https://github.com/psirenny/derby-render) for a list of options.
 
-**render** – Configuration options passed to derby-render. See [derby-render](https://github.com/psirenny/derby-render).
+**fields** – The fields (views) to render and return. Includes: html, text, subject, from, to, etc. See [Nodemailer](https://github.com/andris9/Nodemailer) for a list of suggested fields.
 
-**styles** – Configuration options passed to juice. See [juice](https://github.com/Automattic/juice).
+**css** – Configuration options passed to inline-css. See [inline-css]https://github.com/jonkemp/inline-css).

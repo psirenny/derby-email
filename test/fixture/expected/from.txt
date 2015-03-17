@@ -1,1 +1,1 @@
-app <foo@bar.com>
+foo <foo@bar.com>

@@ -4,15 +4,15 @@
     "url": "https://github.com/psirenny/derby-email/issues"
   },
   "dependencies": {
-    "derby-render": "^1.0.2",
-    "juice": "^0.4.0",
-    "node.extend": "^1.1.0"
+    "async": "^0.9.0",
+    "derby-render": "^2.0.1",
+    "inline-css": "^1.0.4",
+    "lodash": "^3.5.0"
   },
   "description": "Create emails using Derby JS apps/templates.",
   "devDependencies": {
-    "chai": "^1.9.1",
-    "derby": "^0.6.0-alpha23",
-    "mocha": "^1.21.4"
+    "derby": "^0.6.0-alpha42",
+    "tape": "^3.5.0"
   },
   "engines": {
     "node": "0.10.x"
@@ -32,7 +32,7 @@
     "url": "https://github.com/psirenny/derby-email.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha test"
+    "test": "node test"
   },
-  "version": "0.3.1"
+  "version": "1.0.0"
 }

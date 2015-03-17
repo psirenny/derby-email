@@ -1,11 +1,9 @@
 <From:>
-  {{unescaped $formatEmail('app', 'foo@bar.com')}}
+  {{unescaped $formatEmail(_page.from.name, _page.from.address)}}
 
 <Subject:>
-  Hello {{username}}
+  Subject: {{_page.subject}}
 
-<Body:>
-  <p>This is an email.</p>
-
-<Text:>
-  This is an email.
+<Html:>
+  <h1>Html</h1>
+  <p>This is the html of the email.</p>
