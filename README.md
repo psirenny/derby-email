@@ -25,7 +25,7 @@ Create your views:
     <From:>
       {{unescaped $formatEmail('app', 'foo@bar.com')}}
 
-    <Body:>
+    <Html:>
       <p>Some text.</p>
 
     <Text:>
@@ -38,7 +38,7 @@ Any view named after a field and capitalized will be returned as a result.
     <Subject:>
       Hello {{user}}
 
-    <Body:>
+    <Html:>
       <p>foo bar</p>
 
     <Text:>
