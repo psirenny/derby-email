@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "derby-render": "^2.0.1",
+    "derby-render": "3.0.0",
     "inline-css": "^1.0.4",
     "lodash": "^3.5.0"
   },
@@ -34,5 +34,5 @@
   "scripts": {
     "test": "node test"
   },
-  "version": "1.0.0"
+  "version": "2.0.0"
 }
