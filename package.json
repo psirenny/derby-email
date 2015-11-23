@@ -11,7 +11,7 @@
   },
   "description": "Create emails using Derby JS apps/templates.",
   "devDependencies": {
-    "derby": "^0.6.0-alpha42",
+    "derby": "^0.6.0-alpha61",
     "tape": "^3.5.0"
   },
   "engines": {
